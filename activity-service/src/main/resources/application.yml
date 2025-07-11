@@ -3,7 +3,7 @@ spring:
     name: activity-service
   data:
     mongodb:
-      uri: mongodb://myuser:mypassword@localhost:27017/fitnessactivity
+      uri: mongodb://localhost:27017/fitnessactivity
       database: fitnessactivity
 server:
   port: 8082
