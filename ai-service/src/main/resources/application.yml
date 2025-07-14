@@ -1,11 +1,10 @@
 spring:
   application:
-    name: activity-service
+    name: ai-service
   data:
     mongodb:
-      uri: mongodb://localhost:27017/fitnessactivity
-      database: fitnessactivity
-
+      uri: mongodb://localhost:27017/fitnessrecommendation
+      database: fitnessrecommendation
   rabbitmq:
     template:
       routing-key: activity.tracking
@@ -16,10 +15,15 @@ spring:
     username: guest
     password: guest
 
-server:
-  port: 8082
+gemini:
+  api:
+    url: ${GEMINI_API_URL}
+    key: ${GEMINI_API_KEY}
 
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://localhost:8761/eureka
+      defaultZone: http://localhost:8761/eureka/
+
+server:
+  port: 8083
