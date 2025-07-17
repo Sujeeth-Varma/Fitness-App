@@ -1,4 +1,4 @@
-package com.example.userservice.dto;
+package com.example.apigateway.user;
 
 import lombok.Data;
 

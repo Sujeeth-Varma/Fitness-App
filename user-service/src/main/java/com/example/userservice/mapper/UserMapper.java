@@ -10,6 +10,7 @@ public class UserMapper {
     public UserResponse mapUserToUserResponse(User user) {
         UserResponse response = new UserResponse();
         response.setId(user.getId());
+        response.setKeyCloakId(user.getKeyCloakId());
         response.setEmail(user.getEmail());
         response.setFirstName(user.getFirstName());
         response.setLastName(user.getLastName());
